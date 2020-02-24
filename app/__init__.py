@@ -1,0 +1,15 @@
+from flask import Flask
+
+# Config Values
+USERNAME = 'admin'
+PASSWORD = 'password123'
+
+UPLOAD_FOLDER = './app/static/uploads'
+# SECRET_KEY is needed for session security, the flash() method in this case stores the message in a session
+SECRET_KEY = 'Sup3r$3cretkey'
+
+PHOTO_FOLDER = os.path.join('static', '/app/static/uploads' )
+app.config['UPLOAD_FOLDER'] = PHOTO_FOLDER
+app = Flask(__name__)
+app.config.from_object(__name__)
+from app import views
